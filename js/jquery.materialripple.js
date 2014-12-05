@@ -13,7 +13,7 @@ $.fn.materialripple = function(options) {
 
 	// Let it ripple on click
 	$(this).bind('click', function(e){
-		$(this).find('.'+defaults.rippleClass).removeClass('animated');
+		$(this).find('> .'+defaults.rippleClass).removeClass('animated');
 		// get Mouse Position
 		var mouseX = e.pageX;
 		var mouseY = e.pageY;
@@ -22,16 +22,13 @@ $.fn.materialripple = function(options) {
 		elementWidth = $(this).outerWidth();
 		elementHeight = $(this).outerHeight();
 		d = Math.max(elementWidth, elementHeight);
-		$(this).find('.'+defaults.rippleClass).css({'width': d, 'height': d});
-
-		console.log(mouseX);
-		console.log(mouseY);
+		$(this).find('> .'+defaults.rippleClass).css({'width': d, 'height': d});
 
 		var rippleX = e.clientX - $(this).offset().left - d/2 + $(window).scrollLeft();
 		var rippleY = e.clientY - $(this).offset().top - d/2 + $(window).scrollTop();
 
 		// Position the Ripple Element
-		$(this).find('.'+defaults.rippleClass).css('top', rippleY+'px').css('left', rippleX+'px').addClass('animated');
+		$(this).find('> .'+defaults.rippleClass).css('top', rippleY+'px').css('left', rippleX+'px').addClass('animated');
 
 
 	});
