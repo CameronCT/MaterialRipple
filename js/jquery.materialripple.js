@@ -9,14 +9,14 @@ $.fn.materialripple = function(options) {
 
 	// add Ripple-Wrapper to all Elements
 	$(this).append('<span class="'+defaults.rippleClass+'"></span>');
-	$(this).addClass('has-ripple').css({'position': 'relative', 'overflow': 'hidden'});
+	$(this).addClass('has-ripple');
 
 	// Let it ripple on click
 	$(this).bind('click', function(e){
 		$(this).find('.'+defaults.rippleClass).removeClass('animated');
 		// get Mouse Position
-		var mouseX = e.clientX;
-		var mouseY = e.clientY;
+		var mouseX = e.pageX;
+		var mouseY = e.pageY;
 
 		// for each ripple element, set sizes
 		elementWidth = $(this).outerWidth();
@@ -24,8 +24,11 @@ $.fn.materialripple = function(options) {
 		d = Math.max(elementWidth, elementHeight);
 		$(this).find('.'+defaults.rippleClass).css({'width': d, 'height': d});
 
-		var rippleX = e.clientX - $(this).offset().left - d/2;
-		var rippleY = e.clientY - $(this).offset().top - d/2;
+		console.log(mouseX);
+		console.log(mouseY);
+
+		var rippleX = e.clientX - $(this).offset().left - d/2 + $(window).scrollLeft();
+		var rippleY = e.clientY - $(this).offset().top - d/2 + $(window).scrollTop();
 
 		// Position the Ripple Element
 		$(this).find('.'+defaults.rippleClass).css('top', rippleY+'px').css('left', rippleX+'px').addClass('animated');
