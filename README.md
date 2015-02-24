@@ -1,7 +1,7 @@
 # MaterialRipple
 
 Demo and Informations:
-http://dominikbiedebach.github.io/MaterialRipple
+http://db2k.github.io/MaterialRipple
 
 ## License
 to be continued
