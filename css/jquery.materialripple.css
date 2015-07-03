@@ -20,7 +20,6 @@
 	position: relative;
 	user-select: none;
 	outline: none;
-	display: inline-block;
 }
 @keyframes ripple {
 	100% {

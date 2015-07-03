@@ -2,17 +2,57 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
-	font-size: 14px;
+	font-size: 18px;
+	line-height: 1.6;
 }
 
 .container {
 	width: 50%;
 	margin: 0 auto;
-	padding: 40px 0;
+	padding: 0px 0;
 }
+
+.header {
+	padding: 100px 45px;
+	background: #03A9F4;
+	margin-bottom: 80px;
+	color: #fff;
+	text-align: center;
+}
+
+.header h1 {
+	font-size: 75px;
+	line-height: 1;
+	margin: 0;
+}
+
+p {
+	margin-bottom: 50px;
+}
+
+table {
+	width: 100%;
+	border: 1px solid #ddd;
+	margin-bottom: 100px
+}
+
+tr {
+	border-bottom: 1px solid #ddd;
+}
+
+td {
+	border-right: 1px solid #ddd;
+	padding: 8px
+}
+
+td:last-child {
+	border: none
+}
+
 
 /* Demo Buttons */
 .button {
+	cursor: pointer;
 	padding: 10px 10px;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -72,4 +112,11 @@ html, body {
 .button.raised .ripple-wrapper,
 .button.floating .ripple-wrapper {
 	background: rgba(255, 255, 255, 0.35);
+}
+
+/* Demo */
+.test-div {
+	width: 100px;
+	height: 100px;
+	background: #f00;
 }

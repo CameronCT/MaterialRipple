@@ -9,30 +9,54 @@
 	<link rel="stylesheet" href="css/demo.css">
 </head>
 <body>
+	<div class="header">
+		<div class="container">
+			<h1>Material Ripple Demo</h1>
+			<p>Hello and welcome to the Material Ripple Demo.</p>
+		</div>
+	</div>
 	<div class="container">
-		<h1>Material Ripple Demo</h1>
-		<p>Hello and welcome to the Material Ripple Demo.</p>
+		<h3>What is MaterialRipple.js?</h3>
+		<p>MaterialRipple lets you use that ultra cool active effect on every element you want with modern CSS3 Animations and super smooth animations. You can edit your ripple per CSS, add custom ripples for custom elements and much more!</p>
 
-		<h3>Cool buttons with .ripple</h3>
+		<h3>Works on Buttons</h3>
 		<p>
-			<a href="#" class="button ripple">This is real button</a>
-			<a href="#" class="button raised ripple">This is real button</a>
-			<a href="#" class="button raised danger ripple">This is real button</a>
-			<a href="#" class="button raised invert ripple">This is real button</a>
-			<a href="#" class="button raised warning ripple">This is real button</a>
-			<a href="#" class="button raised success ripple">This is real button</a>
+			<a class="button ripple">Transparent Button</a>
+			<a class="button raised ripple">Blue Button</a>
+			<a class="button raised danger ripple">Danger Button</a>
+			<a class="button raised invert ripple">Invert Button</a>
+			<a class="button raised warning ripple">Warning Button</a>
+			<a class="button raised success ripple">Success Button</a>
 		</p>
+
+		<h3>Works on other elements</h3>
+		<div class="ripple test-div"></div>
 
 		<h3>Filthy ones without</h3>
 		<p>
-			<a href="#" class="button">Not a real cool one!</a>
-			<a href="#" class="button raised">Not a real cool one!</a>
-			<a href="#" class="button raised danger">Not a real cool one!</a>
+			<a class="button">Not a real cool one!</a>
+			<a class="button raised">Not a real cool one!</a>
+			<a class="button raised danger">Not a real cool one!</a>
 		</p>
+
+		<h3>How to use:</h3>
+		<p>Just implement the jquery.materialripple.js into your project and call the function on any element you want to use it on. For example we called it on .ripple.</p>
+		<pre>
+$(function(){
+	$('.ripple').materialripple();
+});
+		</pre>
+
+		<h3>Options</h3>
+		<table>
+			<tr>
+				<td><strong>rippleClass</strong></td><td>Allows you to change the class of the appended ripple effect.</td>
+			</tr>
+		</table>
 	</div>
 
 	<div class="floating-wrapper">
-		<a href="#" class="button floating danger ripple">+</a>
+		<a class="button floating danger ripple">+</a>
 	</div>
 
 	<script src="js/jquery.materialripple.js"></script>
