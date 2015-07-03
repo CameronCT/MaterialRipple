@@ -1,61 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset='utf-8'>
-	<meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.materialripple.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <title>Materialripple by dominikbiedebach</title>
+	<meta charset="UTF-8">
+	<title>Material Ripple Demo</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/jquery.materialripple.css">
+	<link rel="stylesheet" href="css/demo.css">
 </head>
-
 <body>
+	<div class="header">
+		<div class="container">
+			<h1>Material Ripple Demo</h1>
+			<p>Hello and welcome to the Material Ripple Demo.</p>
+		</div>
+	</div>
 	<div class="container">
-		<header>
-			<h1>Materialripple</h1>
-			<h2>jQuery-Plugin for the Material Design Ripple Effect</h2>
-		</header>
+		<h3>What is MaterialRipple.js?</h3>
+		<p>MaterialRipple lets you use that ultra cool active effect on every element you want with modern CSS3 Animations and super smooth animations. You can edit your ripple per CSS, add custom ripples for custom elements and much more!</p>
 
-		<section id="content">
-			<p>I'm happy about your interest in Materialripple - the jQuery-plugin for the famous Material Design active-effect. With this plugin, you can use the active-effect in your projects too without doing anything! The plugin does everything important for you.</p>
-			<p>If you want to learn more about Materialripple, check out the documentation below.</p>
-		
-			<h3>Demo</h3>
-			<p>Here you can see some example buttons.</p>
-			<p>
-				<a href="#" class="button">Simple button</a>
-				<a href="#" class="button raised">Simple button</a>
-				<a href="#" class="button raised danger">Simple button</a>
-				<a href="#" class="button raised invert">Simple button</a>
-				<a href="#" class="button raised warning">Simple button</a>
-				<a href="#" class="button raised success">Simple button</a>
-			</p>
+		<h3>Works on Buttons</h3>
+		<p>
+			<a class="button ripple">Transparent Button</a>
+			<a class="button raised ripple">Blue Button</a>
+			<a class="button raised danger ripple">Danger Button</a>
+			<a class="button raised invert ripple">Invert Button</a>
+			<a class="button raised warning ripple">Warning Button</a>
+			<a class="button raised success ripple">Success Button</a>
+		</p>
 
+		<h3>Works on other elements</h3>
+		<div class="ripple test-div"></div>
 
-			<h3>Documentation</h3>
-			<p>The plugin is easy to use. You need to have jQuery included in your project for usage.</p>
-		</section>
+		<h3>Filthy ones without</h3>
+		<p>
+			<a class="button">Not a real cool one!</a>
+			<a class="button raised">Not a real cool one!</a>
+			<a class="button raised danger">Not a real cool one!</a>
+		</p>
+
+		<h3>How to use:</h3>
+		<p>Just implement the jquery.materialripple.js into your project and call the function on any element you want to use it on. For example we called it on .ripple.</p>
+		<pre>
+$(function(){
+	$('.ripple').materialripple();
+});
+		</pre>
+
+		<h3>Options</h3>
+		<table>
+			<tr>
+				<td><strong>rippleClass</strong></td><td>Allows you to change the class of the appended ripple effect.</td>
+			</tr>
+		</table>
+
+		<h3>Download</h3>
+		<p>You can download the project from <a href="https://github.com/dominikbiedebach/MaterialRipple">Github</a> - <a href="https://github.com/dominikbiedebach/MaterialRipple/archive/master.zip">ZIP-Download</a></p>
 	</div>
 
-	<div class="floating-wrapper" style="bottom: 20px; right: 20px;">
-		<a href="https://github.com/dominikbiedebach/MaterialRipple/archive/master.zip" target="_blank" class="button floating danger"><i class="fa fa-download"></i></a>
+	<div class="floating-wrapper">
+		<a class="button floating danger ripple">+</a>
 	</div>
 
-	<div class="floating-wrapper" style="bottom: 110px; right: 20px;">
-		<a href="https://github.com/dominikbiedebach/MaterialRipple" target="_blank" class="button floating"><i class="fa fa-github"></i></a>
-	</div>
-
-	<div class="floating-wrapper" style="bottom: 200px; right: 20px;">
-		<a href="http://webadepts.de/" target="_blank" class="button floating invert"><i class="fa fa-check"></i></a>
-	</div>
-
-	<script src="javascripts/jquery.materialripple.js" type="text/javascript"></script>
-	<script src="javascripts/main.js" type="text/javascript"></script>
+	<script src="js/jquery.materialripple.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('.ripple').materialripple();
+	});
+	</script>
 </body>
 </html>
