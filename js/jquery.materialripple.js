@@ -41,7 +41,7 @@ $.fn.materialripple = function(options) {
 	$(this).addClass('has-ripple');
 
 	// Let it ripple on click
-	$(this).bind('click', function(e){
+	$(this).click(function(e){
 		addRippleElement(this, e);
 	});
 }
